@@ -1,4 +1,4 @@
-/*
+
 using UnityEngine;
 using System.Collections; 
 using UnityEngine.UI; 
@@ -15,21 +15,19 @@ public class CatBreakThings : MonoBehaviour{
 
     [Header("Set in Inspector")]
     public Text uitLevel; 
-    public Text uitLives; 
     public GameObject[] levels;
     
 
     [Header("Set Dynamically")]
     public int level; 
     public int levelMax; 
-    public int livesLeft = 3; 
     public GameObject current; 
     public GameMode mode = GameMode.idle; 
     
     void Start(){
         S = this; 
         level = 1;  
-        levelMax = levels.Length; 
+        levelMax = 2; 
         StartLevel(); 
     }
 
@@ -49,7 +47,6 @@ public class CatBreakThings : MonoBehaviour{
     void UpdateGUI(){
         // Show the data in the GUI Texts
         uitLevevl.text = "Level: " (level+1)+" of "+levelMax;
-        uitLives.text = "Lives: "+livesLeft;
     }
 
     void Update(){
@@ -65,18 +62,10 @@ public class CatBreakThings : MonoBehaviour{
 
     void NextLevel(){
         level++; 
-        if(level == levelMax){
-            level = 0;
+        if(level > levelMax){
+            levelEnd;
+            SceneManager.NextLevel; 
         }
         StartLevel();
     }
-
-    public static void LivesTaken(){
-        S.livesLeft--; 
-
-        if(livesLeft == 0){
-            SceneManager.LoadScene("_Scene_0"); 
-        }
-    }
 }
-*/
