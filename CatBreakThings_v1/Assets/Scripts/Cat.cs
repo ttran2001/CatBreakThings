@@ -11,4 +11,5 @@ public class Cat : MonoBehaviour
             Destroy(this.gameObject); 
         }
     }
+    
 }

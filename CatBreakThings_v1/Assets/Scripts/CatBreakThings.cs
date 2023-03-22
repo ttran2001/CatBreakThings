@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections; 
 using UnityEngine.UI; 
+using UnityEngine.SceneManagement; 
 
 public enum GameMode{
     idle, 
@@ -16,6 +17,7 @@ public class CatBreakThings : MonoBehaviour{
     public Text uitLevel; 
     public Text uitLives; 
     public GameObject[] levels;
+    
 
     [Header("Set Dynamically")]
     public int level; 
@@ -26,7 +28,6 @@ public class CatBreakThings : MonoBehaviour{
     
     void Start(){
         S = this; 
-
         level = 1;  
         levelMax = levels.Length; 
         StartLevel(); 
@@ -36,7 +37,7 @@ public class CatBreakThings : MonoBehaviour{
         if(levels != null){
             Destroy(current);
         }
-        GameObject[] gos =  GameObject.FindGameObjectWith
+        GameObject[] gos =  GameObject.FindGameObjectWith;
 
         Goal.goalMet = false; 
 
