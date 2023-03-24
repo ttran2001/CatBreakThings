@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class Tutorial : MonoBehaviour
 {
     public void TutorialMenu(){
-        SceneManager.LoadScene("Tutorial Screen");
+        SceneManager.LoadScene("Tutorial Screen"); // Load the Tutorial screen if the user click the tutorial menu button
     }
 }
