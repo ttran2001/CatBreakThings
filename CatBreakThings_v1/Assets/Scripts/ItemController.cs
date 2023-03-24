@@ -10,17 +10,19 @@ public class ItemController : MonoBehaviour
 
     private void Start()
     {
-        mInitialZPosition = transform.position.z;
+        mInitialZPosition = transform.position.z; 
     }
 
     private void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        // When user left click on the mouse
+        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z; 
         mOffset = gameObject.transform.position - GetMouseWorldPos();
     }
 
     private Vector3 GetMouseWorldPos()
     {
+        // Input from mouse  
         var mousePoint = Input.mousePosition;
         mousePoint.z = mZCoord;
         return Camera.main.ScreenToWorldPoint(mousePoint);
