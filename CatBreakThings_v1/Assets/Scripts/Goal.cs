@@ -16,7 +16,7 @@ public class Goal : MonoBehaviour
             Color c = mat.color; 
             c.a=1; 
             mat.color=c;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // Load the next scene of the game. Last screen it will load is the Game Over scene
         }
     }
 }
