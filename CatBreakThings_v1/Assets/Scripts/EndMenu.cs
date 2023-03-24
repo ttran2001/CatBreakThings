@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
    public void RestartGame(){
-        SceneManager.LoadScene("Start Screen 1");
+        SceneManager.LoadScene("Start Screen 1"); // Load the Start Menu Scene
    }
 }
