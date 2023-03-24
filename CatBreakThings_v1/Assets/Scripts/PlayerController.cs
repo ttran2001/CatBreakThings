@@ -15,12 +15,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Move left and right using arrow keys
+        // Move left and right using arrow keys from the user input
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, 0.0f);
         rb.velocity = movement;
 
-        // Jump using spacebar
+        // Jump the Cat object if user hits the space bar
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
