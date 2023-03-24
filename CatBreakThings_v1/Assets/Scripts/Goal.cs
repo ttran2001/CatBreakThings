@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour
 
 
     void OnTriggerEnter(Collider other){
+    // If the Cat Asset collides with the goal, it will set the goalMet to true and change color
         if(other.gameObject.tag == "Cat"){
             Goal.goalMet = true; 
             Material mat = GetComponent<Renderer>().material;
