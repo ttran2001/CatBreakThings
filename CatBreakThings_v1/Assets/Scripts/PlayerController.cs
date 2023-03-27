@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Move left and right using arrow keys from the user input
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(moveHorizontal * speed, rb.velocity.y, 0.0f);
         rb.velocity = movement;
@@ -31,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision){
         if(isOnGround== false){
-            isOnGround = true;
+            isOnGround = true; // If the cat is on the ground after jumping, it resets, letting the cat jump again
         }
     }
 }
